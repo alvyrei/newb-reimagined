@@ -5,10 +5,11 @@ description = '''
 §c%w
 §7A fantasy-themed shader while preserving the vanilla Minecraft feel.
 %v
+§3https://devendrn.github.io/newb-shader/
 ''' # %w = patch warning, %v = version
 authors = ["alvyrei", "devendrn"]
 url = " "
-uuid = "95f774cf-4afa-73e7-a21a-72146307b1d2" # Use https://www.uuidgenerator.net/version4
+uuid = "4a6723ee-592e-4c8a-95f9-843713bd349e" # Use https://www.uuidgenerator.net/version4
 materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
 
 [info] 
@@ -29,19 +30,19 @@ credits = '''
 
 [[subpack]]
 define = "CUSTOM2"
-materials = ["Clouds"]
+materials = ["RenderChunk", "Clouds"]
 description = '''
 Custom
 §7
 
-- Soft Clouds
-- Aurora §bLight Blue §uPurple§7
+- Vanilla Clouds
+- Cloudy Fog
 - Blinking Torch
 '''
 
 [[subpack]]
 define = "CUSTOM1"
-materials = ["Clouds", "RenderChunk"]
+materials = ["RenderChunk", "Clouds"]
 description = '''
 Custom
 §7
@@ -65,7 +66,7 @@ description = '''
 
 [[subpack]]
 define = "LOW"
-materials = ["RenderChunk"]
+materials = ["RenderChunk", "Clouds"]
 description = '''
 §aLow§r
 §7Disable most features to increase your fps.
