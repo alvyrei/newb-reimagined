@@ -46,7 +46,7 @@ vec4 nlWater(
 
       #ifdef NL_AURORA
         vec4 aurora = renderAurora(cloudPos.xyy, t, env.rainFactor, FOG_COLOR);
-        waterRefl += aurora.rgb*aurora.a*fade;
+        waterRefl += aurora.rgb*aurora.a*fade*NL_AURORA_REFL;
       #endif
 
       #if NL_CLOUD_TYPE == 1
