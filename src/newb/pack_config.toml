@@ -1,14 +1,13 @@
-name = "Newb X Legacy"
-version = [0, 16, 0]
-min_supported_mc_version = [1, 21, 111]
+name = "Newb Reimagined"
+version = [0, 16, 1]
+min_supported_mc_version = [1, 21, 130]
 description = '''
 §c%w
-§7- An enchanced vanilla shader for Minecraft!
+§7A fantasy-themed shader while preserving the vanilla Minecraft feel.
 %v
-§3https://devendrn.github.io/newb-shader/
 ''' # %w = patch warning, %v = version
-authors = ["devendrn"]
-url = "https://devendrn.github.io/newb-shader/"
+authors = ["alvyrei", "devendrn"]
+url = " "
 uuid = "95f774cf-4afa-73e7-a21a-72146307b1d2" # Use https://www.uuidgenerator.net/version4
 materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
 
@@ -29,57 +28,85 @@ credits = '''
 # right-most subpack is enabled by default
 
 [[subpack]]
-define = "ROUNDED_CLOUDS"
+define = "CUSTOM2"
 materials = ["Clouds"]
 description = '''
-Rounded Clouds
+Custom
+§7
+
+- Soft Clouds
+- Aurora §bLight Blue §uPurple§7
+- Blinking Torch
 '''
 
 [[subpack]]
-define = "BOX_CLOUDS"
+define = "CUSTOM1"
 materials = ["Clouds", "RenderChunk"]
 description = '''
-Box Clouds
+Custom
+§7
+
+- Double Layer Clouds
+- Chunk Loading Animation
+- Blinking Torch
 '''
 
 [[subpack]]
-define = "CHUNK_ANIM"
-materials = ["RenderChunk"]
+define = "UNBOUND"
+materials = ["RenderChunk", "Clouds", "Sky"]
 description = '''
-Chunk loading animation
+§6Unbound Style§r
+§7Visuals and cloud styles like Complementary Unbound in Java.
+
+- Fantasy/Realistic Clouds
+- Shooting Stars
+- Wavy Water
 '''
 
 [[subpack]]
-define = "NO_WAVE_NO_FOG"
+define = "LOW"
 materials = ["RenderChunk"]
 description = '''
-No fog and wave effects
+§aLow§r
+§7Disable most features to increase your fps.
+
+- Disable Glow Leak
+- Disable Fake Depth
+- Disable Direct Light and more optimized!
 '''
 
 [[subpack]]
-define = "NO_FOG"
-materials = ["RenderChunk"]
+define = "MEDIUM"
+materials = ["RenderChunk", "Clouds"]
 description = '''
-No fog effect
+§eMedium§r
+§7Perfect for perfomance without losing many fps.
+
+- Aurora §bLight Blue §uPurple§7
+- Reducing Plants Wave
+- Disable Ground Reflection
 '''
 
 [[subpack]]
-define = "NO_WAVE"
-materials = ["RenderChunk"]
+define = "HIGH"
+materials = ["RenderChunk", "Sky"]
 description = '''
-No wave effects
-'''
+§cHigh§r
+§7Enable all the advanced features.
 
-#[[subpack]]
-#define = "LITE"
-#materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
-#description = '''
-#Many effects disabled. A bit lighter!
-#'''
+- Fake Depth
+- Glow Leak
+- Galaxy Stars and more!
+'''
 
 [[subpack]]
 define = "DEFAULT"
 materials = []
 description = '''
 Default
+§7Just the default experience!
+
+- Reimagined/Rounded Clouds
+- Disable Aurora & Fake Depth
+- Optimized
 '''
