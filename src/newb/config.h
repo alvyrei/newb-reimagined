@@ -237,9 +237,8 @@
   #undef NL_CLOUD_TYPE 
   #undef NL_GLOW_LEAK
   #define NL_CLOUD_TYPE 0
-  #define NL_AURORA 1.5
   #define NL_BLINKING_TORCH
-  #define NL_CLOUDY_FOG
+  #define NL_CLOUDY_FOG 0.1
 #endif
 
 #ifdef CUSTOM1
