@@ -1,0 +1,36 @@
+{
+	"materials": {
+		"version": "1.0.0",
+        
+        "armor:entity_emissive_alpha": {},
+        "armor_leather:entity_alphatest_change_color": {},
+        "armor_enchanted:entity_emissive_alpha": {},
+        "armor_leather_enchanted:entity_alphatest_change_color_glint": {},
+        
+		"chest:entity_emissive_alpha": {},
+		"dragon_head:entity_emissive_alpha": {},
+        "ender_crystal:entity_emissive_alpha": {},
+        
+        "stray:entity_emissive_alpha": {},
+        "bogged_clothes:entity_emissive_alpha": {},
+        "strider:entity_emissive_alpha": {},
+        "magma_cube:entity_emissive_alpha": {},
+        "spider:entity_emissive_alpha": {},
+        "cave_spider:entity_emissive_alpha": {},
+        "drowned:entity_emissive_alpha": {},
+        "glow_squid:entity_emissive_alpha": {},
+        "warden:entity_emissive_alpha": {},
+        "guardian:entity_emissive_alpha": {},
+        "elder_guardian:entity_emissive_alpha": {},
+        "wither_boss:entity_emissive_alpha": {},
+        "witch:entity_emissive_alpha": {},
+        "shulker:entity_emissive_alpha": {},
+        "phantom:entity_emissive_alpha": {},
+        "ender_dragon:entity_emissive_alpha": {},
+        "enderman:entity_emissive_alpha": {},
+        "vex:entity_emissive_alpha": {},
+        "allay:entity_emissive_alpha": {},
+        
+        "fireworks_rocket:entity_emissive_alpha": {}
+	}
+}
