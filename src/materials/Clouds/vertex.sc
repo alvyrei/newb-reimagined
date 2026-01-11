@@ -15,6 +15,7 @@ $output v_color0
 uniform vec4 FogColor;
 uniform vec4 FogAndDistanceControl;
 uniform vec4 ViewPositionAndTime;
+uniform vec4 CameraPosition;
 
 float fog_fade(vec3 wPos) {
   return clamp(2.0-length(wPos*vec3(0.005, 0.002, 0.005)), 0.0, 1.0);
@@ -61,15 +62,9 @@ void main() {
         #endif
       }
     #else
-      pos.xz = pos.xz - 32.0;
       pos.y *= 0.01;
-      worldPos.x = pos.x*model[0][0];
-      worldPos.z = pos.z*model[2][2];
-      #if BGFX_SHADER_LANGUAGE_GLSL
-        worldPos.y = pos.y+model[3][1];
-      #else
-        worldPos.y = pos.y+model[1][3];
-      #endif
+      
+      worldPos.xyz = mul(model, vec4(pos, 1.0)).xyz;
 
       float fade = fog_fade(worldPos.xyz);
       #if NL_CLOUD_TYPE == 1
@@ -77,7 +72,9 @@ void main() {
         float len = length(worldPos.xz)*0.01;
         worldPos.y -= len*len*clamp(0.2*worldPos.y, -1.0, 1.0);
 
-        color = renderCloudsSimple(skycol, worldPos.xyz, t, rain);
+        vec3 cloudPos = worldPos;
+        cloudPos.xz += CameraPosition.xz;
+        color = renderCloudsSimple(skycol, cloudPos, t, rain);
 
         // cloud depth
         worldPos.y -= NL_CLOUD1_DEPTH*color.a*3.3;
@@ -85,7 +82,7 @@ void main() {
         color.a *= NL_CLOUD1_OPACITY;
 
         #ifdef NL_AURORA
-          color += renderAurora(worldPos, t, rain, FogColor.rgb)*(1.0-color.a);
+          color += renderAurora(cloudPos, t, rain, FogColor.rgb)*(1.0-color.a);
         #endif
 
         color.a *= fade;
