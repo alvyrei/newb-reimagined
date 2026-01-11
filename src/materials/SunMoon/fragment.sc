@@ -4,7 +4,6 @@ $input v_texcoord0
 
 #ifndef INSTANCING
   #include <newb/config.h>
-  #include <newb/functions/tonemap.h>
 
   uniform vec4 SunMoonColor;
 
@@ -15,10 +14,8 @@ void main() {
   #ifndef INSTANCING
     vec4 color = texture2D(s_SunMoonTexture, v_texcoord0);
     color.rgb *= SunMoonColor.rgb;
-    color.rgb *= 4.4*color.rgb;
     float tr = 1.0 - SunMoonColor.a;
-    color.a *= 1.0 - (1.0-NL_SUNMOON_RAIN_VISIBILITY)*tr*tr;
-    color.rgb = colorCorrection(color.rgb);
+    color.a *= 3.1 - tr*tr*tr;
     gl_FragColor = color;
   #else
     gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
