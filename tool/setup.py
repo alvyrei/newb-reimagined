@@ -48,7 +48,7 @@ def _download_file(url: str, path: str) -> None:
                 return
 
 
-NS_DEV_RELEASE = "https://github.com/devendrn/newb-shader/releases/download/dev/"
+NS_DEV_RELEASE = "https://github.com/user-attachments/files/25219058/src-materials-1.26.0.zip"
 
 
 def run(args):
