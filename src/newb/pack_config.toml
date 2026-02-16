@@ -1,6 +1,6 @@
 name = "Newb Reimagined"
-version = [0, 16, 1]
-min_supported_mc_version = [1, 21, 130]
+version = [0, 16, 11]
+min_supported_mc_version = [1, 26, 0]
 description = '''
 §c%w
 §7A fantasy-themed shader while preserving the vanilla Minecraft feel.
@@ -9,7 +9,7 @@ description = '''
 ''' # %w = patch warning, %v = version
 authors = ["alvyrei", "devendrn"]
 url = " "
-uuid = "4a6723ee-592e-4c8a-95f9-843713bd349e" # Use https://www.uuidgenerator.net/version4
+uuid = "ff214877-4bfc-421b-97ff-29451c9887f2" # Use https://www.uuidgenerator.net/version4
 materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
 
 [info] 
