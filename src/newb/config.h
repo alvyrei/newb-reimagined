@@ -288,7 +288,6 @@
 #endif
 
 #ifdef MEDIUM
-  #undef NL_AURORA
   #undef NL_PLANTS_WAVE
   #undef NL_GROUND_REFL
   #define NL_AURORA 1.5
