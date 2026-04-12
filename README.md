@@ -35,7 +35,7 @@ https://faizul726.github.io/blog/list-of-minecraft-v26-10-rd-shaders/
 
 | **Using MB Loader APP:** |
 |:-|
-| 1. Install [MB Loader APK](https://play.google.com/store/apps/details?id=io.github.bambosan.mbloader) |
+| 1. Install [MB Loader APP](https://play.google.com/store/apps/details?id=io.github.bambosan.mbloader) |
 | 2. Launch Minecraft from MB Loader APK. |
 | 2. Import the resource pack and activate it in global resources. |
 
