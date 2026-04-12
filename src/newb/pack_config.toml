@@ -1,5 +1,5 @@
 name = "Newb Reimagined"
-version = [0, 16, 11]
+version = [0, 16, 12]
 min_supported_mc_version = [1, 26, 0]
 description = '''
 §c%w
@@ -9,12 +9,12 @@ description = '''
 ''' # %w = patch warning, %v = version
 authors = ["alvyrei", "devendrn"]
 url = " "
-uuid = "ff214877-4bfc-421b-97ff-29451c9887f2" # Use https://www.uuidgenerator.net/version4
+uuid = "8660d139-9ce8-4577-a84f-a7f6a5e918dc" # Use https://www.uuidgenerator.net/version4
 materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
 
 [info] 
 copyright = '''
-Copyright © 2025 %a, and "Newb Shader" Contributors
+Copyright © 2026 %a, and "Newb Shader" Contributors
 
 This compiled "Newb Shader" resource pack (source code: https://github.com/devendrn/newb-x-mcbe under MIT License) is licensed under CC BY-ND 4.0 (https://creativecommons.org/licenses/by-nd/4.0/). Redistribute only unmodified copies with proper attribution to "Newb Shader" and variant creators (if any). Do not distribute derivatives.
 
