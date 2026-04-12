@@ -1,14 +1,29 @@
-# Newb X Legacy
+# Newb Reimagined
 
-**Newb X Legacy** is a RenderDragon successor to the legacy GLSL shader, [Newb Shader](https://github.com/devendrn/newb-shader-mcbe). It is an enhanced vanilla shader that focuses on being lightweight and having soft aesthetics. It supports Minecraft Bedrock 1.26+ (Windows/Android/iOS).
+**Newb Reimagined** is a shader for Minecraft Bedrock, based on [Newb X Legacy](https://github.com/devendrn/newb-x-mcbe). 
+
+It prioritizes soft lighting, less saturated colors, and a more aesthetic look. 
+Inspired by Complementary Reimagined shader from Minecraft Java. 
+
+Supports Minecraft Bedrock 1.26.10 (Android/Windows/iOS). Created by alvyrei.
 
 <br>
 
-![Screenshots](docs/screenshots.jpg "Newb X Legacy 15.47, MCBE 1.21.0")
+![Screenshots](docs/screenshots.jpg)
+
+<br>
 
 ## Downloads
+[Latest Version](https://github.com/alyow/newb-reimagined/releases)
 
-You can download the shader pack from [release page](https://github.com/devendrn/newb-x-mcbe/releases/latest).
+<br>
+
+## More information about shader in Minecraft Bedrock
+https://faizul726.github.io/blog/
+
+[List shader that support latest version](https://faizul726.github.io/blog/list-of-minecraft-v26-10-rd-shaders/)
+
+<br>
 
 ## Installation
 
@@ -17,20 +32,16 @@ You can download the shader pack from [release page](https://github.com/devendrn
 
 ### Android
 
-| **Using MB Loader APK (Recommended):** |
+| **Using MB Loader APP:** |
 |:-|
-| 1. Install [MB Loader APK](https://play.google.com/store/apps/details?id=io.bambosan.mbloader&pcampaignid=web_share) |
+| 1. Install [MB Loader APK](https://play.google.com/store/apps/details?id=io.github.bambosan.mbloader) |
 | 2. Launch Minecraft from MB Loader APK. |
 | 2. Import the resource pack and activate it in global resources. |
 
-| **Using Patched Minecraft:** |
-|:-|
-| 1. Install [Patched Minecraft App](https://devendrn.github.io/renderdragon-shaders/shaders/installation/android#using-patch-app) |
-| 2. Import the resource pack and activate it in global resources. |
 
 ### Windows
 
-| **Using BRD Mod (Recommended)** |
+| **Using BetterRenderDragon Mod** |
 |:-|
 | 1. Use [BetterRenderDragon](https://github.com/QYCottage/BetterRenderDragon/releases/latest) to enable MaterialBinLoader. |
 | 2. Import the resource pack and activate it in global resources. |
@@ -53,86 +64,6 @@ This method is for [mcpelauncher-manifest](https://mcpelauncher.readthedocs.io/e
 | 2. Follow this [guide](https://faizul726.github.io/guides/shadersmodinstallation) to setup. |
 
 <br>
-
-## Building
-
-### Install dependencies
-- [Git](https://git-scm.com/)
-- [Python](https://www.python.org/) 3.11 or higher required
-- Python packages:
-  - [lazurite](https://veka0.github.io/lazurite/#installation) (Must be `v0.8.3`. Newer or older version may not be supported)
-  - [rich](https://rich.readthedocs.io/en/stable/introduction.html#installation) (Must be `v14.x.x`)
-
-### Get source code
-```
-git clone https://github.com/devendrn/newb-x-mcbe/
-cd newb-x-mcbe
-```
-
-### Install dependencies from requirements.txt
-*Skip if you already have installed those versions.*
-```
-python -m pip install -r requirements.txt
-```
-
-### Setup build environment
-> [!NOTE]
-> On Windows, run `.\build.bat` instead of `./build.sh` for all following commands.
-```
-./build.sh setup
-```
-This will download shaderc binary and material data required to build shader.
-
-<br>
-
-### Compile specific shader materials
-```
-./build.sh mats
-```
-Compiled material.bin files will be inside `build/<platform>/`
-
-**Command usage:**
-```
-usage: build mats [-h] [-p {android,windows,merged,ios}] [-m M [M ...]] [-s S]
-
-options:
-  -h, --help            show this help message and exit
-  -p {android,windows,merged,ios}
-                        build profile
-  -m M [M ...]          build materials (eg: Sky)
-  -s S                  subpack config to use (eg: NO_WAVE)
-```
-
-### Compile and build full shader pack
-```
-./build.sh pack
-```
-
-The final mcpack will be inside `build/`.
-
-**Command usage:**
-```
-usage: build pack [-h] [-p {android,windows,merged,ios}] [--no-zip] [--no-label] [-v V]
-
-options:
-  -h, --help            show this help message and exit
-  -p {android,windows,merged,ios}
-                        build profile
-  --no-zip              don't make archive
-  --no-label            don't label materials
-  -v V                  version number eg: 17
-```
-
-> [!TIP]
-> If you want to customize pack name, author, version and other details, you can do so in `src/newb/pack_config.toml`.
-
-<br>
-
-## Development
-
-Clangd can be used to get code completion and error checks for source files inside include/newb. Fake bgfx header and clangd config are provided for the same.
-- **Neovim**: Install clangd LSP.
-- **VSCode**: Install [vscode-clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) extension.
 
 ## License
 
