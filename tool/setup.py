@@ -48,14 +48,13 @@ def _download_file(url: str, path: str) -> None:
                 return
 
 
-NS_DEV_RELEASE = "https://github.com/devendrn/newb-shader/releases/download/dev/"
+NS_DEV_RELEASE = "https://github.com/user-attachments/files/25219058/src-materials-1.26.10.zip"
 
 
 def run(args):
     arch = platform.machine()
 
-    tool_path = 'tool'
-    data_path = os.path.join(tool_path, 'data')
+    data_path = os.path.join('tool', 'data')
     mat_path = os.path.join(data_path, 'materials')
 
     shaderc_url = NS_DEV_RELEASE + "shaderc-"
@@ -78,6 +77,7 @@ def run(args):
             progress.console.print("No shaderc version found for", arch, style='red')
             exit(1)
 
+        # libc++_shared.so not found fix for termux
         lib_path = "tool/lib"
         if not os.path.exists(lib_path):
             os.mkdir(lib_path)
@@ -104,20 +104,11 @@ def run(args):
 
         test_mat = os.path.join(mat_path, "Sky.material.json")
         if not os.path.exists(test_mat):
-            
-            local_override = os.path.join(tool_path, 'materials')
-
-            if os.path.exists(local_override):
-                progress.console.print(f"Priority: Using folder '{local_override}'")
-                if os.path.exists(mat_path):
-                    shutil.rmtree(mat_path)
-                shutil.copytree(local_override, mat_path)
-            else:
-                progress.console.print("Downloading source materials (fallback)")
-                mat_filename = os.path.join(data_path, 'materials.zip')
-                _download_file(NS_DEV_RELEASE + "src-materials-1.21.111.zip", mat_filename)
-                with zipfile.ZipFile(mat_filename, 'r') as zip_ref:
-                    zip_ref.extractall(mat_path)
-                os.remove(mat_filename)
+            progress.console.print("Downloading source materials")
+            mat_filename = os.path.join(data_path, 'materials.zip')
+            _download_file(NS_DEV_RELEASE + "src-materials-1.26.10.zip", mat_filename)
+            with zipfile.ZipFile(mat_filename, 'r') as zip_ref:
+                zip_ref.extractall(mat_path)
+            os.remove(mat_filename)
 
     progress.console.print("[bold green]All done!")
