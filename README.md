@@ -20,6 +20,7 @@ Supports Minecraft Bedrock 1.26.10 (Android/Windows/iOS). Created by alvyrei.
 
 ## More information about shader in Minecraft Bedrock
 https://faizul726.github.io/blog/
+
 List shader that support latest version
 https://faizul726.github.io/blog/list-of-minecraft-v26-10-rd-shaders/
 
