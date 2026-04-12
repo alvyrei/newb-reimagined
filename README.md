@@ -5,7 +5,7 @@
 It prioritizes soft lighting, less saturated colors, and a more aesthetic look. 
 Inspired by Complementary Reimagined shader from Minecraft Java. 
 
-Supports Minecraft Bedrock 1.21.130+ (Android/Windows/iOS). Created by alvyrei.
+Supports Minecraft Bedrock 1.26.10 (Android/Windows/iOS). Created by alvyrei.
 
 <br>
 
@@ -16,7 +16,12 @@ Supports Minecraft Bedrock 1.21.130+ (Android/Windows/iOS). Created by alvyrei.
 ## Downloads
 [Latest Version](https://github.com/alyow/newb-reimagined/releases)
 
-Beta version can be found on our discord server
+<br>
+
+## More information about shader in Minecraft Bedrock
+https://faizul726.github.io/blog/
+List shader that support latest version
+https://faizul726.github.io/blog/list-of-minecraft-v26-10-rd-shaders/
 
 <br>
 
@@ -27,20 +32,16 @@ Beta version can be found on our discord server
 
 ### Android
 
-| **Using MB Loader APK (Recommended):** |
+| **Using MB Loader APP:** |
 |:-|
-| 1. Install [MB Loader APK](https://play.google.com/store/apps/details?id=io.bambosan.mbloader&pcampaignid=web_share) |
+| 1. Install [MB Loader APK](https://play.google.com/store/apps/details?id=io.github.bambosan.mbloader) |
 | 2. Launch Minecraft from MB Loader APK. |
 | 2. Import the resource pack and activate it in global resources. |
 
-| **Using Patched Minecraft:** |
-|:-|
-| 1. Install [Patched Minecraft App](https://devendrn.github.io/renderdragon-shaders/shaders/installation/android#using-patch-app) |
-| 2. Import the resource pack and activate it in global resources. |
 
 ### Windows
 
-| **Using BRD Mod (Recommended)** |
+| **Using BetterRenderDragon Mod** |
 |:-|
 | 1. Use [BetterRenderDragon](https://github.com/QYCottage/BetterRenderDragon/releases/latest) to enable MaterialBinLoader. |
 | 2. Import the resource pack and activate it in global resources. |
