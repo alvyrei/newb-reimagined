@@ -29,16 +29,16 @@
 
 /* Color correction */
 #define NL_TONEMAP_TYPE 4              // 1:Exponential, 2:Reinhard, 3:Extended Reinhard, 4:ACES
-#define NL_GAMMA 1.615                 // 0.3 low ~ 2.0 high
-#define NL_EXPOSURE 1.588              // [toggle] 0.5 dark ~ 3.0 bright
-#define NL_SATURATION 1.012            // [toggle] 0.0 grayscale ~ 4.0 super saturated
+#define NL_GAMMA 1.612                 // 0.3 low ~ 2.0 high
+#define NL_EXPOSURE 1.573              // [toggle] 0.5 dark ~ 3.0 bright
+#define NL_SATURATION 0.968            // [toggle] 0.0 grayscale ~ 4.0 super saturated
 //#define NL_TINT                      // [toggle] enable light/dark tone tinting
 #define NL_TINT_LOW  vec3(0.3,0.5,1.4) // color tint for dark tone
 #define NL_TINT_HIGH vec3(1.4,0.7,0.3) // color tint for light tone
 
 /* Terrain lighting */
 #define NL_SUN_INTENSITY 2.95     // 0.5 weak ~ 5.0 bright
-#define NL_TORCH_INTENSITY 0.160  // 0.5 weak ~ 3.0 bright
+#define NL_TORCH_INTENSITY 0.23  // 0.5 weak ~ 3.0 bright
 #define NL_NIGHT_BRIGHTNESS -0.21 // 0.0 dark ~ 2.0 bright
 #define NL_CAVE_BRIGHTNESS 0.02   // 0.0 dark ~ 2.0 bright
 #define NL_SHADOW_INTENSITY 1.5  // 0.0 no shadow ~ 1.0 strong shadow
