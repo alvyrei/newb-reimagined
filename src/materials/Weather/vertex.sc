@@ -18,15 +18,7 @@ uniform vec4 Velocity;
 uniform vec4 PositionBaseOffset;
 uniform vec4 PositionForwardOffset;
 
-// vec3 fmod(vec3 a, vec3 b) { return a - b*trunc(a/b); }
-
 void main() {
-  #ifdef INSTANCING
-    mat4 model = mtxFromRows(i_data1, i_data2, i_data3, vec4(0.0, 0.0, 0.0, 1.0));
-    vec3 worldPos = instMul(model, vec4(a_position, 1.0)).xyz;
-  #else
-    vec3 worldPos = mul(u_model[0], vec4(a_position, 1.0)).xyz;
-  #endif
 
   vec2 texcoord = UVOffsetAndScale.xy + (a_texcoord0 * UVOffsetAndScale.zw);
 
