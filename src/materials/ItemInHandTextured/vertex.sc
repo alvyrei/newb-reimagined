@@ -20,6 +20,7 @@ uniform vec4 TimeOfDay;
 uniform vec4 Day;
 
 void main() {
+  mat4 World = u_model[0];
   vec2 uv0 = 2.0*a_texcoord0.xy;
   uv0 = fract(uv0) + ((floor(uv0)-0.5)/16384.0);
   vec3 wpos;
