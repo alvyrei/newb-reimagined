@@ -58,6 +58,14 @@ void main() {
   vec3 bPos = fract(cPos);
   vec3 tiledCpos = fract(cPos*0.0625);
 
+  // bit 16 for dithering??
+  // bit 15-1 for texture mapping
+  // uvec2 a16 = uvec2(round(a_texcoord0 * 65535.0));
+  // vec2 uv0 = vec2((a16 & uvec2(32767u)) << uvec2(1)) / 65535.0;
+  // uv0 += (2.0*vec2((a16 & uvec2(32768u)) >> uvec2(15)) - 1.0) / 32768.0;
+  vec2 uv0 = 2.0*a_texcoord0.xy;
+  uv0 = fract(uv0) + ((floor(uv0)-0.5)/16384.0);
+
   // bit 16 for dithering / mask tint
   // bits 15-9 for ??
   // bits 8-5 for x, bits 4-1 for y
@@ -99,7 +107,7 @@ void main() {
   vec3 light = nlLighting(skycol, env, worldPos, torchColor, a_color0.rgb, FogColor.rgb, uv1, lit, isTree, shade, t);
 
   #if defined(ALPHA_TEST) && (defined(NL_PLANTS_WAVE) || defined(NL_LANTERN_WAVE)) && !defined(RENDER_AS_BILLBOARDS)
-    nlWave(worldPos, light, env.rainFactor, uv1, lit, a_texcoord0, bPos, a_color0, cPos, tiledCpos, t, s_MatTexture, isColored, camDis, isTree);
+    nlWave(worldPos, light, env.rainFactor, uv1, lit, uv0, bPos, a_color0, cPos, tiledCpos, t, s_MatTexture, isColored, camDis, isTree);
   #endif
 
   // loading chunks
@@ -161,7 +169,7 @@ void main() {
   #ifdef NL_LAVA_NOISE
     bool isc = (a_color0.r+a_color0.g+a_color0.b) > 2.999;
     bool isb = bPos.y < 0.891 && bPos.y > 0.889;
-    if (isc && isb && (uv1.x > 0.81 && uv1.x < 0.876) && a_texcoord0.y > 0.45) {
+    if (isc && isb && (uv1.x > 0.81 && uv1.x < 0.876) && uv0.y > 0.5) {
       vec4 lava = nlLavaNoise(tiledCpos, t);
       #ifdef NL_LAVA_NOISE_BUMP
         worldPos.y += NL_LAVA_NOISE_BUMP*lava.a;
@@ -172,7 +180,7 @@ void main() {
 
   v_extra = vec4(shade, worldPos.y, water, shimmer);
   v_refl = refl;
-  v_texcoord0 = a_texcoord0;
+  v_texcoord0 = uv0;
   v_lightmapUV = uv1;
   v_color0 = color;
   v_color1 = a_color0;
