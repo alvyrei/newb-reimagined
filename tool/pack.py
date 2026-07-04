@@ -162,7 +162,7 @@ def run(args):
     else:  # ios
         patch_warning = "Materials need to be installed manually for shader to work"
 
-    pack_description = pack_description.replace("%w", patch_warning).replace("%v", "v" + pack_version + "-" + args.p)
+    pack_description = pack_description.replace("%w", patch_warning).replace("%v", "r" + pack_version + " " + args.p)
     pack_config['description'] = pack_description
     pack_manifest = create_pack_manifest(pack_config)
 
@@ -171,7 +171,7 @@ def run(args):
     status.start()
 
     if not args.no_label:
-        _name = pack_name + " v" + pack_version
+        _name = pack_name + " r" + pack_version
         lp.Material.write = mwrite
 
     _build(status, args.p, "default", pack_config['materials'], mats_dir)
