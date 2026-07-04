@@ -2,7 +2,7 @@
 #define NL_CONFIG_H
 
 /*
-  NEWB SHADER MAIN CONFIG
+  NEWB REIMAGINED SHADER MAIN CONFIG
   This part contains base configuration options for the shader.
 
   TOGGLES

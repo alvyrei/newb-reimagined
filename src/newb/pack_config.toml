@@ -1,11 +1,10 @@
 name = "Newb Reimagined"
-version = [0, 16, 12]
-min_supported_mc_version = [1, 26, 0]
+version = [0, 16, 18]
+min_supported_mc_version = [1, 26, 30]
 description = '''
 §c%w
 §7A fantasy-themed shader while preserving the vanilla Minecraft feel.
 %v
-§3https://devendrn.github.io/newb-shader/
 ''' # %w = patch warning, %v = version
 authors = ["alvyrei", "devendrn"]
 url = " "
