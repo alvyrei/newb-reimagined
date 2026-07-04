@@ -64,7 +64,7 @@
 #define NL_FOG 1.0                  // [toggle] 0.1 subtle ~ 1.0 blend with sky completely
 #define NL_MIST_DENSITY 0.2        // 0.0 no mist ~ 1.0 misty
 #define NL_RAIN_MIST_OPACITY 0.12   // [toggle] 0.04 very subtle ~ 0.5 thick rain mist blow
-//#define NL_CLOUDY_FOG 0.1         // [toggle] 0.0 subtle - 0.8 dense fog clouds
+#define NL_CLOUDY_FOG 0.1         // [toggle] 0.0 subtle - 0.8 dense fog clouds
 
 /* Sky colors - zenith=top, horizon=bottom */
 #define NL_DAWN_ZENITH_COL   vec3(0.19,0.180,0.395)
@@ -238,7 +238,6 @@
   #undef NL_GLOW_LEAK
   #define NL_CLOUD_TYPE 0
   #define NL_BLINKING_TORCH
-  #define NL_CLOUDY_FOG 0.1
 #endif
 
 #ifdef CUSTOM1
@@ -266,6 +265,7 @@
   #undef NL_GLOW_LEAK
   #undef NL_GROUND_REFL
   #undef NL_GODRAY
+  #undef NL_CLOUDY_FOG
   #undef NL_LAVA_NOISE
   #undef NL_WATER_CLOUD_AURORA_REFLECTION
   #undef NL_UNDERWATER_STREAKS
