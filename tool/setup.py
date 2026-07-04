@@ -61,7 +61,7 @@ def get_shaderc_url(data_path: str, os_name: str, arch: str):
     elif os_name == "Linux" or os_name == "Android":
         if arch == 'x86_64':
             shaderc_url += "linux-x64" 
-        if arch in ['aarch64']:
+        elif arch in ['aarch64']:
             shaderc_url += "android-arm64"
         elif arch in ['armv8l', 'armv8l']:
             shaderc_url += "android-arm"
@@ -108,7 +108,7 @@ def run(args):
     if not os.path.exists(mat_path):
         os.mkdir(mat_path)
 
-    if os_name == "Linux":
+    if os_name == "Android":
         check_and_apply_termux_fix()
 
     # compare with existing setup, remove if update is needed
