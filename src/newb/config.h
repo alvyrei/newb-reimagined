@@ -188,10 +188,10 @@
 //#define NL_SUNMOON_ANGLE 45.0 // [toggle] 0.0 no tilt ~ 90.0 tilt of 90 degrees
 #define NL_SUNMOON_SIZE 1.4     // 0.3 tiny ~ 4.0 massive
 #define NL_SUN_BLOOM
-#define NL_SUN_BLOOM_INTENSITY 0.6
+#define NL_SUN_BLOOM_INTENSITY 0.8
 #define NL_SUN_BLOOM_COL vec3(0.03,0.04,0.02)
 #define NL_MOON_BLOOM
-#define NL_MOON_BLOOM_INTENSITY 0.6
+#define NL_MOON_BLOOM_INTENSITY 1.0
 #define NL_MOON_BLOOM_COL vec3(0.35,0.41,0.49)
 
 /* Fake godrays during sunrise/sunset */
