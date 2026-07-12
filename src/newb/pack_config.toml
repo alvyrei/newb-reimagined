@@ -8,7 +8,7 @@ description = '''
 ''' # %w = patch warning, %v = version
 authors = ["alvyrei", "devendrn"]
 url = " "
-uuid = "8660d139-9ce8-4577-a84f-a7f6a5e918dc" # Use https://www.uuidgenerator.net/version4
+uuid = "296c0d9a-4ccb-4fe6-8714-276aecddd6e5" # Use https://www.uuidgenerator.net/version4
 materials = ["Sky", "RenderChunk", "Actor", "ActorGlint", "EndSky", "Clouds", "SunMoon", "Weather", "ItemInHandTextured", "ItemInHandColor", "ItemInHandColorGlint", "Stars"]
 
 [info] 
