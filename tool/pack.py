@@ -156,9 +156,9 @@ def run(args):
     if profile == 'android':
         patch_warning += "MB Loader"
     elif profile == 'windows':
-        patch_warning += "BetterRenderDragon"
+        patch_warning += "Wyvern Loader"
     elif profile == 'merged':
-        patch_warning += "MB Loader (Android) or BetterRenderDragon (Windows)\nFor iOS, materials need to be installed manually for shader to work"
+        patch_warning += "MB Loader (Android) or Wyvern (Windows)\nFor iOS, materials need to be installed manually for shader to work"
     else:  # ios
         patch_warning = "Materials need to be installed manually for shader to work"
 
