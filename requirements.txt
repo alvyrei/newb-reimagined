@@ -1,4 +1,0 @@
-lazurite==0.8.4
-rich==14.2.0
-packaging>=25.0
-
