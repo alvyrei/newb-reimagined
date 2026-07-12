@@ -26,7 +26,7 @@ void main() {
 
       #ifdef NL_CLOUD2_LAYER2
         vec2 parallax = vDir.xz / abs(vDir.y) * NL_CLOUD2_LAYER2_OFFSET;
-        vec3 offsetPos = v_color0.xyz;
+        vec3 offsetPos = cloudPos;
         offsetPos.xz += parallax;
         vec4 color2 = renderCloudsRounded(s_CloudTexture, vDir, offsetPos, v_color1.a, v_color2.a*2.0, v_color2.rgb, v_color1.rgb, NL_CLOUD_PARAMS(_LAYER2_));
         color = mix(color2, color, 0.2 + 0.8*color.a);
