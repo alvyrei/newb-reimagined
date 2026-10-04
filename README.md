@@ -5,7 +5,7 @@
 It prioritizes soft lighting, less saturated colors, and a more aesthetic look. 
 Inspired by Complementary Reimagined shader from Minecraft Java. 
 
-Supports Minecraft Bedrock 1.26.30 (Android/Windows/iOS). Created by alvyrei.
+Supports Minecraft Bedrock 1.26+ (Android/Windows/iOS). Created by alvyrei.
 
 <br>
 
