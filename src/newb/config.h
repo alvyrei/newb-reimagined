@@ -222,7 +222,7 @@
 #define NR_DIRLIGHT                                   //
 
 /*
-  NEWB SHADER SUBPACK CONFIG
+  NEWB REIMAGINED SHADER SUBPACK CONFIG
   This part contains custom configuration options for each subpack.
 
   If a value is already defined,
