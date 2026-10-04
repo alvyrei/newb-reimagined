@@ -12,7 +12,7 @@ def main():
         epilog="GitHub: https://github.com/devendrn/newb-x-mcbe"
     )
 
-    profiles = ['android', 'windows', 'merged', 'ios']
+    profiles = ['android', 'windows', 'ios', 'multiplatform']
     profile_default = profiles[1 if os.name == 'nt' else 0]
 
     subparsers = parser.add_subparsers(help='sub-command', dest='subcommand')

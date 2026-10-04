@@ -10,13 +10,13 @@ on:
       platform:
         description: 'platform'
         required: true
-        default: 'Merged'
+        default: 'Multi-platform'
         type: choice
         options:
         - Android
         - Windows
-        - IOS
-        - Merged
+        - iOS
+        - Multiplatform
         - All
 
 jobs:
@@ -66,7 +66,7 @@ jobs:
         path: ./build/pack-android
   ios:
     runs-on: ubuntu-latest
-    if:  ${{ (github.event.inputs.platform == 'IOS') || (github.event.inputs.platform == 'All') }}
+    if:  ${{ (github.event.inputs.platform == 'iOS') || (github.event.inputs.platform == 'All') }}
     steps:
     - uses: actions/checkout@v4
       with:
@@ -88,9 +88,9 @@ jobs:
       with:
         name: newb-reimagined-ios
         path: ./build/pack-ios
-  merged:
+  multiplatform:
     runs-on: windows-2022
-    if:  ${{ (github.event.inputs.platform == 'Merged') || (github.event.inputs.platform == 'All')}}
+    if:  ${{ (github.event.inputs.platform == 'Multi-platform') || (github.event.inputs.platform == 'All')}}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
@@ -105,8 +105,8 @@ jobs:
     - run: pip install -r requirements.txt
     - run: |
         .\build.bat setup
-        .\build.bat pack -p merged -v ${{ inputs.subversion }} --no-zip
+        .\build.bat pack -p multiplatform -v ${{ inputs.subversion }} --no-zip
     - uses: actions/upload-artifact@v4
       with:
-        name: newb-reimagined-merged
-        path: ./build/pack-merged
+        name: newb-reimagined-multiplatform
+        path: ./build/pack-multiplatform
